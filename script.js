@@ -1,0 +1,78 @@
+"use strict"
+const arr = ['ROCK', 'PAPER', 'SCISSORS'];
+const score = [0,0];
+
+const generateRandomNumber =function(){
+  // Generate a random decimal between 0 and 2
+  const randomDecimal = Math.random()*3;
+  // Scale the random decimal to the desired range (1 to 3)
+  const randomNumber = Math.floor(randomDecimal) ;
+  return randomNumber;
+}
+
+
+//function to randomly return Rock, Paper or Scissors
+function getComputerChoice() {
+    const randomNumber = generateRandomNumber();
+    const computerChoice = arr[randomNumber];
+    return computerChoice;
+}
+
+
+let computer;
+let player;
+const playRound = function (playerSelection, computerSelection) {
+    const playerChoice = prompt('Enter Paper, Rock or Scissors');
+    playerSelection = playerChoice.toUpperCase();    
+    computerSelection = getComputerChoice();
+    computer = 0;
+    player = 0;
+    if (playerSelection == computerSelection) console.log("ITS A TIE");
+    if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
+        console.log('You Win!','Player:', playerSelection, 'Computer:',computerSelection)
+        score[0]++;
+        console.log(score)
+    }
+     if (playerSelection == 'PAPER' && computerSelection == 'ROCK') {
+        console.log('You Win!','Player:', playerSelection, 'Computer:',computerSelection)
+         score[0]++;
+         console.log(score)
+         
+    } if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
+        console.log('You Win!')
+        score[0]++;
+         console.log(score)
+
+    }
+    if (playerSelection == 'PAPER' && computerSelection == 'SCISSORS') {
+         console.log('You Lose!','Player:', playerSelection, 'Computer:',computerSelection, score)
+        score[1]++;
+         console.log(score)
+
+    }
+     if (playerSelection == 'SCISSORS' && computerSelection == 'ROCK') {
+         console.log('You Lose!','Player:', playerSelection, 'Computer:',computerSelection, score)
+         score[1]++;
+         console.log(score)
+
+     }
+      if (playerSelection == 'ROCK' && computerSelection == 'PAPER') {
+         console.log('You Lose!','Player:', playerSelection, 'Computer:',computerSelection, score)
+          score[1]++;
+         console.log(score)
+
+      }
+        
+        
+        
+}
+
+// playRound()
+
+function game(){
+    for (let i = 1; i <= 5; i++) {
+         playRound();
+    }    
+}
+game();
+console.log('Your score', score);
