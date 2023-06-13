@@ -19,14 +19,10 @@ function getComputerChoice() {
 }
 
 
-let computer;
-let player;
 const playRound = function (playerSelection, computerSelection) {
     const playerChoice = prompt('Enter Paper, Rock or Scissors');
     playerSelection = playerChoice.toUpperCase();    
     computerSelection = getComputerChoice();
-    computer = 0;
-    player = 0;
     if (playerSelection == computerSelection) console.log("ITS A TIE");
     if (playerSelection == 'ROCK' && computerSelection == 'SCISSORS') {
         console.log('You Win!','Player:', playerSelection, 'Computer:',computerSelection)
@@ -67,7 +63,6 @@ const playRound = function (playerSelection, computerSelection) {
         
 }
 
-// playRound()
 
 function game(){
     for (let i = 1; i <= 5; i++) {
