@@ -5,7 +5,7 @@
     /* position:absolute */
     top:50%;
     left:50%;
-    transform:translateX(-50),translateY(-50);
+    transform:translateX(-50),translateY(-50)
 }
 
 body{
@@ -91,17 +91,17 @@ body{
            /* border:1px solid */
     }
 
-/* #rock {margin-right:1em;
+#rock {margin-right:9em;
     
 }
 
-#paper {margin-left:1em
+#paper {margin-left:9em
     
 }
 
 #scissors{
     margin-top:9em
-} */
+}
 .footer{
     display:flex;
     justify-content: center;
@@ -131,3 +131,50 @@ padding:12px;
 
 /* Gradient in RGBA */
 /* linear-gradient(to right, rgba(219, 222, 227, 1) 0%, 10.854092240333557%, rgba(237, 237, 235, 1) 21.708184480667114%, 26.156583428382874%, rgba(184, 186, 181, 1) 30.604982376098633%, 36.832740902900696%, rgba(233, 223, 213, 1) 43.06049942970276%, 50.35587251186371%, rgba(200, 193, 185, 1) 57.65124559402466%, 62.455517053604126%, rgba(144, 118, 93, 1) 67.2597885131836%, 70.99644243717194%, rgba(89, 86, 81, 1) 74.73309636116028%, 79.35943007469177%, rgba(224, 204, 179, 1) 83.98576378822327%, 88.76938619210591%, rgba(190, 175, 152, 1) 93.55300859598854%, 96.77650429799428%, rgba(198, 200, 163, 1) 100%); */
+
+
+@media (max-width: 767px) {
+  /* Styles for small screens */
+  body{display:flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;}
+
+ .header{ 
+   display:block;
+   position:relative;
+   margin:10px;
+   left:42%;
+   padding:5em;
+   clip-path: circle(46% at center);
+}
+
+.title{
+    letter-spacing: 0;
+    font-size:40px;
+   /* line-height: 1;    */
+
+}
+.gameOptions{
+    
+   position:relative;
+   margin:10px;
+   left:39%;
+   gap:4em
+}
+.gameBody{
+    position:relative;
+    /* border:1px soild; */
+}
+.info{
+    display:flex;
+    line-height: 0;
+    letter-spacing: 0;
+    font-size: 25px;
+    position: absolute;
+    margin:0 auto;
+    top:50%;
+    left:50%;
+    transform:translate(50%,50%)
+}
+ }
