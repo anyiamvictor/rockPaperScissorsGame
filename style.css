@@ -91,17 +91,17 @@ body{
            /* border:1px solid */
     }
 
-#rock {margin-right:9em;
+/* #rock {margin-right:1em;
     
 }
 
-#paper {margin-left:9em
+#paper {margin-left:1em
     
 }
 
 #scissors{
     margin-top:9em
-}
+} */
 .footer{
     display:flex;
     justify-content: center;
