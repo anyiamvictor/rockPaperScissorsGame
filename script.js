@@ -1,8 +1,5 @@
 "use strict"
 const arr = ['ROCK', 'PAPER', 'SCISSORS'];
-const score = [0, 0];
-// const player1 = score[0];
-// const player2 = score[1];
 const btnPlay = document.querySelectorAll('.btnPlay');
 const btnRock = document.querySelector('#rock');
 const btnPaper = document.querySelector('#paper');
@@ -14,6 +11,11 @@ const playerScoreText = document.querySelector('#scoreValuePlayer');
 const computerScoreText = document.querySelector('#scoreValueComputer');
 const playerMainScore = document.querySelector("#playerMainScore");
 const computerMainScore = document.querySelector("#computerMainScore");
+let computerScore = 0;
+let playerScore = 0;
+let computerSelect;
+let playerSelection;
+const score = [0, 0];
 
 
 
@@ -51,7 +53,7 @@ const generateRandomNumber =function(){
 }
 
 
-//function to randomly return Rock, Paper or Scissors
+//function to randomly return Rock, Paper or Scissors for the computer
 function getComputerChoice() {
     const randomNumber = generateRandomNumber();
     const computerChoice = arr[randomNumber];
@@ -60,10 +62,7 @@ function getComputerChoice() {
 
 
 
-let computerScore = 0;
-let playerScore = 0;
-let computerSelect;
-let playerSelection;
+
 
 btnRock.addEventListener('click', function() {
     playerSelection = 'ROCK';
@@ -94,7 +93,7 @@ btnRock.addEventListener('click', function() {
 
 
 })
-//
+
 btnPaper.addEventListener('click', function() {
     playerSelection = 'PAPER';
     computerSelect = getComputerChoice();
@@ -119,10 +118,7 @@ btnPaper.addEventListener('click', function() {
 
     }
 
-    // console.log(playerSelection);
-    // console.log(computerSelect);
-
-
+  
 })
 
 btnScissors.addEventListener('click', function() {
@@ -151,36 +147,3 @@ btnScissors.addEventListener('click', function() {
 
 
 })
-
-
-const playRound = function (playerSelection, computerSelection) {
-    let playerChoice = playerSelection;
-    playerSelection = playerChoice.toUpperCase();    
-    computerSelection = getComputerChoice();
-    
-    if (playerSelection == 'PAPER' && computerSelection == 'ROCK') {
-        return playerScore++;
-        return playerScore
-    }       
-    if (playerSelection == 'SCISSORS' && computerSelection == 'PAPER') {
-       return playerScore++;
-        return playerScore
-    }
-    if (playerSelection == 'PAPER' && computerSelection == 'SCISSORS') {
-       return computerScore++;
-        return computerScore
-    } 
-    if (playerSelection == 'SCISSORS' && computerSelection == 'ROCK') {
-       return computerScore++;
-        return computerScore
-    }   
-   
-        return computerScore
-    
-}
-
-
-// playRound('paper')
-// console.log(computerScore, playerScore);
-
-
