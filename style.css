@@ -1,0 +1,133 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* position:absolute */
+    top:50%;
+    left:50%;
+    transform:translateX(-50),translateY(-50);
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    /* background-color:#f1f1f5; */
+    /* color:whitesmoke */
+    
+
+}
+
+.header{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right bottom, white,rgb(56, 1, 97));
+    color:rgb(255, 255, 255);
+    clip-path: circle(50% at center);
+    
+}
+
+.title{
+    display:block;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 12px;
+    font-size: 40px;
+    font-weight:540;
+}
+
+
+.info{
+    display:block;
+    text-align: center;
+    line-height: 2;
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-shadow: 3px 2px 4px black,3px 2px 39px black,2px 1px 10px rgba(229, 245, 6, 0.648);
+    color:white;
+    margin-bottom:5em;
+}
+
+
+.gameOptions{
+    display:flex;
+    justify-content: center;
+}
+
+.btn{
+    border:2px solid gray;
+    border-radius:5px;
+    padding:15px;
+    margin:12px;
+    font-size: 20px;
+    font-weight: 800;
+    }
+
+    .gameBody{
+        display:flex;
+        /* border:1px solid; */
+        flex-direction: column;
+        align-items: center;
+        margin-top:9em
+    }
+    
+    .gameBodyTop{
+        display:flex;
+        /* justify-content: space-between; */
+        /* align-items: center; */
+    }
+  
+
+    .score{
+        display:flex;
+        padding:12px;
+        gap:5em
+    }
+
+  
+    #scoreValue{
+        display:block;
+        text-align: center;
+        padding:12px;
+           /* border:1px solid */
+    }
+
+#rock {margin-right:9em;
+    
+}
+
+#paper {margin-left:9em
+    
+}
+
+#scissors{
+    margin-top:9em
+}
+.footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding:12px;
+    border-radius:15px;
+    background-image: linear-gradient(to right bottom, rgb(56, 1, 97),white,white,white, rgb(56, 1, 97));
+    /* color:white; */
+    /* border:1px solid rgba(226, 214, 226, 0); */
+
+}
+
+.footer a{
+    text-decoration: none;
+    color:black
+}
+#footerSpan{
+/* width:30px */
+padding:12px;
+}
+
+.footer img{
+    /* width:30px; */
+}
+/* Gradient in Hex */
+
+/* Gradient in RGBA */
+/* linear-gradient(to right, rgba(219, 222, 227, 1) 0%, 10.854092240333557%, rgba(237, 237, 235, 1) 21.708184480667114%, 26.156583428382874%, rgba(184, 186, 181, 1) 30.604982376098633%, 36.832740902900696%, rgba(233, 223, 213, 1) 43.06049942970276%, 50.35587251186371%, rgba(200, 193, 185, 1) 57.65124559402466%, 62.455517053604126%, rgba(144, 118, 93, 1) 67.2597885131836%, 70.99644243717194%, rgba(89, 86, 81, 1) 74.73309636116028%, 79.35943007469177%, rgba(224, 204, 179, 1) 83.98576378822327%, 88.76938619210591%, rgba(190, 175, 152, 1) 93.55300859598854%, 96.77650429799428%, rgba(198, 200, 163, 1) 100%); */
